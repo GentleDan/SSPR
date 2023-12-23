@@ -5,10 +5,10 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Копируем JAR-файл приложения в контейнер (предполагается, что JAR-файл находится в каталоге target/)
-COPY target/user-device-application-0.0.1-SNAPSHOT.jar user-device-application.jar
+COPY target/messaging-application-0.0.1-SNAPSHOT.jar messaging-application.jar
 
 # Экспонируем порт, на котором будет работать приложение
-EXPOSE 8090
+EXPOSE 8099
 
 # Запускаем приложение при запуске контейнера
-CMD ["java", "-jar", "user-device-application.jar"]
+CMD ["java", "-jar", "messaging-application.jar"]
